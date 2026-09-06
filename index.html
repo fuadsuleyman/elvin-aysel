@@ -331,6 +331,170 @@
   .music .bars rect:nth-child(3){ animation-delay: .36s; }
   @keyframes bounce{ 0%,100%{ transform: scaleY(.4);} 50%{ transform: scaleY(1);} }
 
+  /* ---------- ZƏRF (giriş ekranı) ---------- */
+  body.gate-open{ overflow: hidden; }
+  body.gate-open .music{ opacity: 0; pointer-events: none; }
+
+  .gate{
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    gap: 34px;
+    grid-auto-rows: max-content;
+    align-content: center;
+    background:
+      radial-gradient(900px 620px at 50% 40%, #fcf8ef, #f2e9d8 72%);
+    transition: opacity .9s ease, visibility .9s;
+  }
+  .gate.is-gone{ opacity: 0; visibility: hidden; }
+
+  .env-stage{
+    perspective: 1500px;
+    display: grid;
+    place-items: center;
+  }
+
+  .env{
+    position: relative;
+    width: min(80vw, 400px);
+    aspect-ratio: 1.5 / 1;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    animation: float 5s ease-in-out infinite;
+    transition: transform .5s ease;
+  }
+  .env:hover{ transform: translateY(-5px); }
+  .env:focus-visible{ outline: 2px solid var(--gold); outline-offset: 16px; }
+  @keyframes float{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-7px);} }
+
+  .env-back{
+    position: absolute; inset: 0;
+    background: linear-gradient(160deg, #f9f3e6, #eee2c8);
+    border: 1px solid #d4c092;
+    box-shadow: 0 26px 50px -18px rgba(90, 70, 30, .42);
+  }
+
+  /* zərfin içindəki kart */
+  .env-card{
+    position: absolute;
+    left: 7%;
+    width: 86%;
+    height: 92%;
+    bottom: 6%;
+    background: var(--cream);
+    border: 1px solid var(--gold-pale);
+    box-shadow: 0 -8px 26px -14px rgba(90, 70, 30, .4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    z-index: 2;
+    transition: transform 1s cubic-bezier(.2, .8, .25, 1);
+  }
+  .env-card .k-eyebrow{
+    font-family: var(--display);
+    font-size: .58rem;
+    letter-spacing: .38em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-left: .38em;
+  }
+  .env-card .k-names{
+    font-family: var(--display);
+    font-size: clamp(1.25rem, 5.4vw, 1.8rem);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+  .env-card .k-date{
+    font-family: var(--display);
+    font-style: italic;
+    font-size: .84rem;
+    color: var(--ink-soft);
+  }
+
+  /* ön cib */
+  .env-pocket{
+    position: absolute; inset: 0;
+    background: linear-gradient(172deg, #efe4cb, #e2d2ac);
+    clip-path: polygon(0 0, 50% 46%, 100% 0, 100% 100%, 0 100%);
+    z-index: 3;
+    filter: drop-shadow(0 -1px 1.5px rgba(140, 110, 45, .3));
+  }
+
+  /* qapaq */
+  .env-flap{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 46%;
+    background: linear-gradient(185deg, #fbf6ea, #f1e7d0);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    transform: rotateX(0deg);
+    transition: transform 1s cubic-bezier(.5, .05, .25, 1);
+    z-index: 5;
+    backface-visibility: hidden;
+    filter: drop-shadow(0 2px 2.5px rgba(140, 110, 45, .3));
+  }
+
+  /* möhür */
+  .seal{
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: clamp(56px, 17%, 84px);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #d8b96a, #a8873c 62%, #8b6d2c);
+    box-shadow: 0 4px 12px -4px rgba(80, 60, 20, .6), inset 0 -2px 6px rgba(90,70,20,.45);
+    display: grid;
+    place-items: center;
+    z-index: 6;
+    transition: transform .5s ease, opacity .5s ease;
+  }
+  .seal span{
+    font-family: var(--display);
+    font-size: clamp(.9rem, 3.4vw, 1.15rem);
+    letter-spacing: .06em;
+    color: #fdf6e6;
+    text-shadow: 0 1px 1px rgba(80,60,20,.5);
+  }
+  .seal::after{
+    content: "";
+    position: absolute;
+    inset: 12%;
+    border: 1px solid rgba(253, 246, 230, .45);
+    border-radius: 50%;
+  }
+
+  .gate-hint{
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.05rem;
+    letter-spacing: .04em;
+    color: var(--ink-soft);
+    animation: breathe 2.6s ease-in-out infinite;
+    text-align: center;
+  }
+  @keyframes breathe{ 0%,100%{ opacity: .55;} 50%{ opacity: 1;} }
+  .gate-hint.is-hidden{ animation: none; opacity: 0; transition: opacity .45s ease; }
+
+  /* açılma vəziyyəti */
+  .env.is-open .env-flap{ transform: rotateX(180deg); z-index: 1; }
+  .env.is-open .seal{ transform: translate(-50%, -50%) scale(.4); opacity: 0; }
+  .env.is-open .env-card{ transform: translateY(-46%); z-index: 7; }
+  .env.is-open{ animation: none; }
+
+  @media (prefers-reduced-motion: reduce){
+    .env{ animation: none; }
+  }
+
   /* ---------- entrance ---------- */
   .reveal{ animation: rise .9s ease-out backwards; }
   .reveal:nth-child(1){ animation-delay: .05s; }
@@ -347,6 +511,25 @@
     .cd-cell{ padding: 10px 2px; }
   }
 </style>
+
+<!-- ===================== ZƏRF (giriş ekranı) ===================== -->
+<div class="gate" id="gate">
+  <div class="env-stage">
+    <button class="env" id="env" aria-label="Dəvətnaməni açmaq üçün zərfə toxunun">
+      <span class="env-back" aria-hidden="true"></span>
+      <span class="env-card" aria-hidden="true">
+        <span class="k-eyebrow">Dəvətnamə</span>
+        <span class="k-names" id="kNames">Elvin &amp; Aysel</span>
+        <span class="k-date" id="kDate">17 Oktyabr 2026</span>
+      </span>
+      <span class="env-pocket" aria-hidden="true"></span>
+      <span class="env-flap" aria-hidden="true"></span>
+      <span class="seal" aria-hidden="true"><span id="sealText">E &amp; A</span></span>
+    </button>
+  </div>
+  <p class="gate-hint" id="gateHint">Açmaq üçün zərfə toxunun</p>
+</div>
+<script>document.body.classList.add("gate-open");</script>
 
 <canvas id="dust" aria-hidden="true"></canvas>
 
@@ -458,7 +641,12 @@ const CONFIG = {
   rsvpSonTarix:"1 Oktyabr",
   telefon:    "+994519249999",             // zəng düyməsi
   whatsapp:   "994519249999",              // ölkə kodu ilə, + və boşluqsuz
-  whatsappMetn:"Salam! Toy dəvətinizi aldım, iştirak edəcəyəm. Nəfər sayı: "
+  whatsappMetn:"Salam! Toy dəvətinizi aldım, iştirak edəcəyəm. Nəfər sayı: ",
+
+  // Zərf ekranı
+  zerfMetni:  "Açmaq üçün zərfə toxunun",
+  // Zərf açılanda musiqi avtomatik başlasın? (istəməsəniz: false)
+  musiqiAvtomatik: true
 };
 /* ============================================================ */
 
@@ -470,6 +658,13 @@ document.getElementById("dateLine").textContent  = CONFIG.tarixYazi;
 document.getElementById("venueName").textContent = CONFIG.mekan;
 document.getElementById("venueAddr").textContent = CONFIG.unvan;
 document.getElementById("rsvpDate").textContent  = CONFIG.rsvpSonTarix;
+
+/* --- zərf ekranı --- */
+document.getElementById("kNames").innerHTML = CONFIG.bey + " &amp; " + CONFIG.gelin;
+document.getElementById("kDate").textContent = CONFIG.tarixYazi.split("·")[0].trim();
+document.getElementById("sealText").innerHTML =
+  CONFIG.bey.charAt(0).toLocaleUpperCase("az") + " &amp; " + CONFIG.gelin.charAt(0).toLocaleUpperCase("az");
+document.getElementById("gateHint").textContent = CONFIG.zerfMetni;
 
 document.getElementById("mapBtn").href =
   "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.xeriteSorgu);
@@ -620,5 +815,38 @@ document.getElementById("waBtn").href =
     timer = setInterval(schedule, 250);
     btn.setAttribute("aria-pressed", "true");
   });
+})();
+
+/* --- zərfin açılması --- */
+(function(){
+  const gate = document.getElementById("gate");
+  const env  = document.getElementById("env");
+  const hint = document.getElementById("gateHint");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let opened = false;
+
+  function open(){
+    if (opened) return;
+    opened = true;
+
+    // musiqi məhz bu toxunuşla başlayır (brauzerlər bunu tələb edir)
+    if (CONFIG.musiqiAvtomatik){
+      const mb = document.getElementById("musicBtn");
+      if (mb && mb.getAttribute("aria-pressed") !== "true") mb.click();
+    }
+
+    env.classList.add("is-open");
+    hint.classList.add("is-hidden");
+
+    const wait = reduce ? 0 : 1500;
+    setTimeout(() => {
+      gate.classList.add("is-gone");
+      document.body.classList.remove("gate-open");
+      setTimeout(() => gate.remove(), 1000);
+    }, wait);
+  }
+
+  env.addEventListener("click", open);
+  gate.addEventListener("click", e => { if (e.target === gate) open(); });
 })();
 </script>
