@@ -1,0 +1,624 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elvin & Aysel Dəvətnaməsi</title>
+
+<!-- =====================================================================
+     LİNK ÖNİZLƏMƏSİ (WhatsApp / Telegram / Facebook / iMessage)
+     Bu hissəni ƏLLƏ dəyişin — botlar JavaScript işlətmir, ona görə
+     aşağıdakı mətnlər CONFIG-dən avtomatik dolmur.
+     og:url və og:image MÜTLƏQ tam ünvan olmalıdır (https:// ilə).
+     ===================================================================== -->
+<meta name="description" content="17 Oktyabr 2026, Şənbə · 19:00 · Gülüstan Sarayı, Bakı. Sizi toyumuza dəvət edirik.">
+<meta property="og:type"        content="website">
+<meta property="og:locale"      content="az_AZ">
+<meta property="og:site_name"   content="Toy Dəvətnaməsi">
+<meta property="og:title"       content="Elvin &amp; Aysel — Toy Dəvətnaməsi">
+<meta property="og:description" content="17 Oktyabr 2026, Şənbə · 19:00 · Gülüstan Sarayı, Bakı. Sizi toyumuza dəvət edirik.">
+<meta property="og:url"         content="https://sizin-sayt.com/">
+<meta property="og:image"       content="https://sizin-sayt.com/onizleme.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"   content="Elvin və Ayselin toy dəvətnaməsi">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Elvin &amp; Aysel — Toy Dəvətnaməsi">
+<meta name="twitter:description" content="17 Oktyabr 2026, Şənbə · 19:00 · Gülüstan Sarayı, Bakı.">
+<meta name="twitter:image"       content="https://sizin-sayt.com/onizleme.jpg">
+<meta name="theme-color" content="#faf5ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+
+<style>
+  :root{
+    --ink:        #2b2620;
+    --ink-soft:   #6d6250;
+    --gold:       #a8873c;
+    --gold-light: #d9c188;
+    --gold-pale:  #e8dcbd;
+    --cream:      #faf5ea;
+    --parchment:  #f2e9d8;
+    --shadow:     rgba(74, 60, 32, .13);
+
+    --display: "Cormorant Garamond", Cormorant, Georgia, "Times New Roman", serif;
+    --body:    "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ambient gold dust */
+  #dust{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sheet{
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--cream);
+    box-shadow: 0 0 60px var(--shadow);
+    padding: clamp(18px, 4vw, 30px);
+  }
+
+  .frame{
+    border: 1px solid var(--gold-pale);
+    outline: 3px double var(--gold-pale);
+    outline-offset: 5px;
+    padding: clamp(26px, 6vw, 54px) clamp(20px, 5vw, 48px) clamp(38px, 7vw, 60px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(34px, 6vw, 52px);
+    text-align: center;
+  }
+
+  /* ---------- type ---------- */
+  .eyebrow{
+    font-family: var(--display);
+    font-size: .74rem;
+    font-weight: 500;
+    letter-spacing: .42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+    padding-left: .42em;
+  }
+
+  .names{
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(2.9rem, 13vw, 5rem);
+    line-height: .98;
+    letter-spacing: .01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .amp{
+    display: block;
+    font-style: italic;
+    font-size: .46em;
+    color: var(--gold);
+    margin: .16em 0;
+    font-weight: 400;
+  }
+
+  .lede{
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(1.05rem, 3.4vw, 1.3rem);
+    color: var(--ink-soft);
+    max-width: 34ch;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  h2.section-title{
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: .78rem;
+    letter-spacing: .34em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 1.1em;
+    padding-left: .34em;
+  }
+
+  /* ---------- ornaments ---------- */
+  .rule{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: var(--gold-light);
+  }
+  .rule::before, .rule::after{
+    content: "";
+    height: 1px;
+    width: min(90px, 22%);
+    background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+  }
+  .rule svg{ width: 34px; height: 14px; display: block; }
+
+  /* ---------- hero ---------- */
+  .hero{ display: flex; flex-direction: column; gap: 22px; }
+  .hero .date-line{
+    font-family: var(--display);
+    font-size: clamp(1rem, 3.6vw, 1.2rem);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0;
+    padding-left: .22em;
+  }
+
+  /* ---------- countdown ---------- */
+  .countdown{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(4px, 2vw, 14px);
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .cd-cell{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 4px;
+    border-left: 1px solid var(--gold-pale);
+  }
+  .cd-cell:first-child{ border-left: none; }
+  .cd-num{
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 8vw, 2.7rem);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+  .cd-label{
+    font-size: .64rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-left: .2em;
+  }
+  .cd-done{
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--gold);
+    margin: 0;
+  }
+
+  /* ---------- schedule ---------- */
+  .schedule{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .row{
+    display: grid;
+    grid-template-columns: 4.6em 1fr;
+    align-items: baseline;
+    gap: 16px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--gold-pale);
+  }
+  .row:last-child{ border-bottom: none; }
+  .row .time{
+    font-family: var(--display);
+    font-size: 1.22rem;
+    color: var(--gold);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .02em;
+  }
+  .row .what{ font-size: 1rem; color: var(--ink); }
+  .row .what small{
+    display: block;
+    color: var(--ink-soft);
+    font-size: .85rem;
+    font-style: italic;
+  }
+
+  /* ---------- venue ---------- */
+  .venue-name{
+    font-family: var(--display);
+    font-size: clamp(1.7rem, 6vw, 2.3rem);
+    font-weight: 400;
+    margin: 0 0 .25em;
+    line-height: 1.15;
+  }
+  .venue-addr{
+    margin: 0 auto 1.6em;
+    color: var(--ink-soft);
+    max-width: 32ch;
+  }
+
+  /* ---------- buttons ---------- */
+  .actions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 24px;
+    font-family: var(--display);
+    font-size: .82rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+    cursor: pointer;
+    transition: background .25s ease, color .25s ease;
+  }
+  .btn:hover{ background: var(--gold); color: var(--cream); }
+  .btn--solid{ background: var(--gold); color: var(--cream); }
+  .btn--solid:hover{ background: var(--ink); border-color: var(--ink); color: var(--cream); }
+  .btn svg{ width: 15px; height: 15px; fill: currentColor; flex: none; }
+  .btn:focus-visible, .music:focus-visible{
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+
+  .note{
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    margin: 0;
+  }
+  .note a{ color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-pale); }
+
+  .signoff{
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(1.15rem, 4vw, 1.45rem);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ---------- music toggle ---------- */
+  .music{
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-pale);
+    background: var(--cream);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 3px 14px var(--shadow);
+    transition: color .25s ease, border-color .25s ease;
+  }
+  .music svg{ width: 19px; height: 19px; fill: currentColor; }
+  .music[aria-pressed="true"]{ color: var(--ink); border-color: var(--gold); }
+  .music .bars{ display: none; }
+  .music[aria-pressed="true"] .bars{ display: block; }
+  .music[aria-pressed="true"] .note-icon{ display: none; }
+  .music .bars rect{ animation: bounce 1s ease-in-out infinite; transform-origin: bottom; }
+  .music .bars rect:nth-child(2){ animation-delay: .18s; }
+  .music .bars rect:nth-child(3){ animation-delay: .36s; }
+  @keyframes bounce{ 0%,100%{ transform: scaleY(.4);} 50%{ transform: scaleY(1);} }
+
+  /* ---------- entrance ---------- */
+  .reveal{ animation: rise .9s ease-out backwards; }
+  .reveal:nth-child(1){ animation-delay: .05s; }
+  .reveal:nth-child(2){ animation-delay: .18s; }
+  .reveal:nth-child(3){ animation-delay: .3s; }
+  @keyframes rise{ from{ opacity: 0; transform: translateY(14px);} to{ opacity: 1; transform: none;} }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; }
+  }
+
+  @media (max-width: 420px){
+    .row{ grid-template-columns: 4em 1fr; gap: 12px; }
+    .cd-cell{ padding: 10px 2px; }
+  }
+</style>
+
+<canvas id="dust" aria-hidden="true"></canvas>
+
+<button class="music" id="musicBtn" aria-pressed="false" aria-label="Musiqini yandır / söndür" title="Musiqi">
+  <svg class="note-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3v12.5a3.5 3.5 0 1 1-2-3.16V7.6l-8 1.6v8.3a3.5 3.5 0 1 1-2-3.16V6.4L20 3z"/></svg>
+  <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="4" height="14" rx="1"/><rect x="10" y="6" width="4" height="14" rx="1"/><rect x="17" y="6" width="4" height="14" rx="1"/></svg>
+</button>
+
+<main class="sheet">
+  <div class="frame">
+
+    <!-- HERO -->
+    <header class="hero reveal">
+      <p class="eyebrow">Toy Dəvətnaməsi</p>
+      <h1 class="names" id="names">Elvin<span class="amp">&amp;</span>Aysel</h1>
+      <div class="rule" aria-hidden="true">
+        <svg viewBox="0 0 60 24"><path d="M2 12 C 14 2, 20 22, 30 12 C 40 2, 46 22, 58 12" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="12" r="2" fill="currentColor"/></svg>
+      </div>
+      <p class="date-line" id="dateLine">17 Oktyabr 2026 · Şənbə · 19:00</p>
+      <p class="lede">Həyatımızın ən xoşbəxt gününü sizinlə bölüşmək bizim üçün böyük şərəfdir.</p>
+    </header>
+
+    <!-- COUNTDOWN -->
+    <section class="reveal" aria-labelledby="cd-title">
+      <h2 class="section-title" id="cd-title">Toya qalan vaxt</h2>
+      <div class="countdown" id="countdown">
+        <div class="cd-cell"><span class="cd-num" id="cdD">—</span><span class="cd-label">Gün</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdH">—</span><span class="cd-label">Saat</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdM">—</span><span class="cd-label">Dəqiqə</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdS">—</span><span class="cd-label">Saniyə</span></div>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true">
+      <svg viewBox="0 0 60 24"><path d="M2 12 C 14 2, 20 22, 30 12 C 40 2, 46 22, 58 12" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="12" r="2" fill="currentColor"/></svg>
+    </div>
+
+    <!-- PROGRAM -->
+    <section aria-labelledby="pr-title">
+      <h2 class="section-title" id="pr-title">Mərasim proqramı</h2>
+      <div class="schedule">
+        <div class="row"><span class="time">18:30</span><span class="what">Qonaqların qarşılanması<small>Foye, giriş mərtəbəsi</small></span></div>
+        <div class="row"><span class="time">19:00</span><span class="what">Gəlin və bəyin gəlişi<small>Mərasimin rəsmi başlanğıcı</small></span></div>
+        <div class="row"><span class="time">20:00</span><span class="what">Şam süfrəsi və musiqi</span></div>
+        <div class="row"><span class="time">22:30</span><span class="what">Toy tortu və şirin süfrə</span></div>
+      </div>
+    </section>
+
+    <!-- VENUE -->
+    <section aria-labelledby="vn-title">
+      <h2 class="section-title" id="vn-title">Məkan</h2>
+      <p class="venue-name" id="venueName">Gülüstan Sarayı</p>
+      <p class="venue-addr" id="venueAddr">Mehdi Hüseyn küçəsi 1, Bakı</p>
+      <div class="actions">
+        <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Xəritədə aç
+        </a>
+        <a class="btn" id="calBtn" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm12 8v9H5v-9h14z"/></svg>
+          Təqvimə əlavə et
+        </a>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true">
+      <svg viewBox="0 0 60 24"><path d="M2 12 C 14 2, 20 22, 30 12 C 40 2, 46 22, 58 12" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="12" r="2" fill="currentColor"/></svg>
+    </div>
+
+    <!-- RSVP -->
+    <section aria-labelledby="rs-title">
+      <h2 class="section-title" id="rs-title">İştirakınızı təsdiqləyin</h2>
+      <p class="note" style="margin-bottom:1.4em">Zəhmət olmasa <strong id="rsvpDate">1 Oktyabr</strong> tarixinədək bizə xəbər verin — neçə nəfər olacağınızı da yazın.</p>
+      <div class="actions">
+        <a class="btn btn--solid" id="waBtn" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2zm5.3 14.06c-.23.64-1.34 1.23-1.85 1.27-.5.05-.96.23-3.23-.67-2.72-1.07-4.44-3.8-4.57-3.98-.13-.18-1.08-1.44-1.08-2.75s.69-1.95.93-2.22c.24-.27.52-.34.7-.34h.5c.16 0 .38-.06.59.45.23.55.77 1.9.84 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.4.47c-.13.14-.27.29-.12.56.15.27.67 1.1 1.43 1.79.98.87 1.8 1.14 2.07 1.27.27.14.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.64-.16 1.28z"/></svg>
+          WhatsApp
+        </a>
+        <a class="btn" id="telBtn" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+          Zəng et
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="rule" aria-hidden="true" style="margin-bottom:26px">
+        <svg viewBox="0 0 60 24"><path d="M2 12 C 14 2, 20 22, 30 12 C 40 2, 46 22, 58 12" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="12" r="2" fill="currentColor"/></svg>
+      </div>
+      <p class="signoff">Sevincimizi sizinlə bölüşməyi səbirsizliklə gözləyirik.</p>
+    </footer>
+
+  </div>
+</main>
+
+<script>
+/* ============================================================
+   BURANI DƏYİŞİN — bütün məlumatlar bu blokdadır
+   ============================================================ */
+const CONFIG = {
+  bey:        "Elvin",
+  gelin:      "Aysel",
+  // Toy tarixi və saatı (Bakı vaxtı): YYYY-MM-DDTHH:MM:SS+04:00
+  tarix:      "2026-10-17T19:00:00+04:00",
+  tarixYazi:  "17 Oktyabr 2026 · Şənbə · 19:00",
+  mekan:      "Gülüstan Sarayı",
+  unvan:      "Mehdi Hüseyn küçəsi 1, Bakı",
+  xeriteSorgu:"Gülüstan Sarayı, Bakı",     // Google Maps-da axtarılacaq mətn
+  rsvpSonTarix:"1 Oktyabr",
+  telefon:    "+994519249999",             // zəng düyməsi
+  whatsapp:   "994519249999",              // ölkə kodu ilə, + və boşluqsuz
+  whatsappMetn:"Salam! Toy dəvətinizi aldım, iştirak edəcəyəm. Nəfər sayı: "
+};
+/* ============================================================ */
+
+/* --- məzmunu CONFIG-dən doldur --- */
+document.getElementById("names").innerHTML =
+  CONFIG.bey + '<span class="amp">&amp;</span>' + CONFIG.gelin;
+document.title = CONFIG.bey + " & " + CONFIG.gelin + " Dəvətnaməsi";
+document.getElementById("dateLine").textContent  = CONFIG.tarixYazi;
+document.getElementById("venueName").textContent = CONFIG.mekan;
+document.getElementById("venueAddr").textContent = CONFIG.unvan;
+document.getElementById("rsvpDate").textContent  = CONFIG.rsvpSonTarix;
+
+document.getElementById("mapBtn").href =
+  "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.xeriteSorgu);
+document.getElementById("telBtn").href = "tel:" + CONFIG.telefon;
+document.getElementById("waBtn").href =
+  "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.whatsappMetn);
+
+/* Google Calendar linki */
+(function(){
+  const start = new Date(CONFIG.tarix);
+  const end   = new Date(start.getTime() + 5 * 60 * 60 * 1000);
+  const fmt = d => d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+  document.getElementById("calBtn").href =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent(CONFIG.bey + " & " + CONFIG.gelin + " — Toy mərasimi") +
+    "&dates=" + fmt(start) + "/" + fmt(end) +
+    "&location=" + encodeURIComponent(CONFIG.mekan + ", " + CONFIG.unvan);
+})();
+
+/* --- geri sayım --- */
+(function(){
+  const target = new Date(CONFIG.tarix).getTime();
+  const box = document.getElementById("countdown");
+  const el = {
+    d: document.getElementById("cdD"),
+    h: document.getElementById("cdH"),
+    m: document.getElementById("cdM"),
+    s: document.getElementById("cdS")
+  };
+  const pad = n => String(n).padStart(2, "0");
+  let timer = null;
+
+  function tick(){
+    const diff = target - Date.now();
+    if (diff <= 0){
+      box.innerHTML = '<p class="cd-done" style="grid-column:1/-1">Bu gün bizim günümüzdür ♥</p>';
+      if (timer) clearInterval(timer);
+      return;
+    }
+    const s = Math.floor(diff / 1000);
+    el.d.textContent = Math.floor(s / 86400);
+    el.h.textContent = pad(Math.floor(s / 3600) % 24);
+    el.m.textContent = pad(Math.floor(s / 60) % 60);
+    el.s.textContent = pad(s % 60);
+  }
+  tick();
+  timer = setInterval(tick, 1000);
+})();
+
+/* --- qızılı toz effekti --- */
+(function(){
+  const cv = document.getElementById("dust");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches){ cv.remove(); return; }
+  const ctx = cv.getContext("2d");
+  let w, h, parts;
+
+  function reset(){
+    w = cv.width  = window.innerWidth;
+    h = cv.height = window.innerHeight;
+    const n = Math.round(Math.min(70, w / 14));
+    parts = Array.from({length: n}, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 1.8 + .5,
+      vy: Math.random() * .25 + .07,
+      vx: (Math.random() - .5) * .16,
+      a: Math.random() * .35 + .12,
+      p: Math.random() * Math.PI * 2
+    }));
+  }
+
+  function draw(){
+    ctx.clearRect(0, 0, w, h);
+    for (const p of parts){
+      p.y += p.vy;
+      p.p += .012;
+      p.x += p.vx + Math.sin(p.p) * .22;
+      if (p.y > h + 6){ p.y = -6; p.x = Math.random() * w; }
+      if (p.x > w + 6) p.x = -6;
+      if (p.x < -6) p.x = w + 6;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(168, 135, 60," + p.a + ")";
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  reset();
+  window.addEventListener("resize", reset);
+  draw();
+})();
+
+/* --- musiqi qutusu (Web Audio ilə yaradılır, xarici fayl yoxdur) --- */
+(function(){
+  const btn = document.getElementById("musicBtn");
+  let ctx = null, timer = null, step = 0, nextTime = 0;
+
+  // D-major music box motivi (frekansiya, Hz)
+  const N = { D4:293.66, E4:329.63, Fs4:369.99, G4:392.00, A4:440.00, B4:493.88, Cs5:554.37, D5:587.33, Fs5:739.99, A5:880.00 };
+  const melody = [
+    N.Fs5, N.E4,  N.D5, N.Fs4, N.A4,  N.D5, N.Fs5, N.A4,
+    N.B4,  N.G4,  N.D5, N.B4,  N.A4,  N.Fs4,N.D4,  N.A4,
+    N.D5,  N.Fs4, N.A4, N.D5,  N.Cs5, N.A4, N.Fs4, N.A4,
+    N.B4,  N.D5,  N.G4, N.B4,  N.A4,  N.Fs4,N.D4,  N.Fs4
+  ];
+  const BEAT = 0.42;
+
+  function pluck(freq, t, gainScale){
+    const osc  = ctx.createOscillator();
+    const osc2 = ctx.createOscillator();
+    const g    = ctx.createGain();
+    osc.type = "sine";   osc.frequency.value  = freq;
+    osc2.type = "triangle"; osc2.frequency.value = freq * 2;
+    const g2 = ctx.createGain(); g2.gain.value = .12;
+    osc2.connect(g2); g2.connect(g);
+    osc.connect(g); g.connect(ctx.destination);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.16 * gainScale, t + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 1.6);
+    osc.start(t);  osc.stop(t + 1.7);
+    osc2.start(t); osc2.stop(t + 1.7);
+  }
+
+  function schedule(){
+    while (nextTime < ctx.currentTime + 0.6){
+      pluck(melody[step % melody.length], nextTime, step % 8 === 0 ? 1 : 0.78);
+      if (step % 8 === 0) pluck(melody[step % melody.length] / 2, nextTime, 0.5);
+      step++;
+      nextTime += BEAT;
+    }
+  }
+
+  btn.addEventListener("click", () => {
+    const on = btn.getAttribute("aria-pressed") === "true";
+    if (on){
+      clearInterval(timer); timer = null;
+      if (ctx) ctx.suspend();
+      btn.setAttribute("aria-pressed", "false");
+      return;
+    }
+    if (!ctx){
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      nextTime = ctx.currentTime + 0.1;
+    }
+    ctx.resume();
+    nextTime = Math.max(nextTime, ctx.currentTime + 0.1);
+    schedule();
+    timer = setInterval(schedule, 250);
+    btn.setAttribute("aria-pressed", "true");
+  });
+})();
+</script>
